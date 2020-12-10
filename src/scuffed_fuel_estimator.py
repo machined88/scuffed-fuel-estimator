@@ -22,7 +22,7 @@ class Car:
         self.carburant_names = []
         self.carburant_types = []
 
-    #Requtest page in HTML and extract names + prices ----> carburant_types list (with the shorten function I made before).
+    #Request page in HTML and extract names + prices and merge them into carburant_types list (with the shorten function I made before).
     def get_page_info(self):
         url = "https://carbu.com/france/prixmoyens"
         html_content = requests.get(url).text
@@ -92,19 +92,19 @@ class Car:
             total = self.sansplomb95e5_price * self.refuel
             return f"Your last refuel ({self.refuel} L) cost {total} €"
 
-        if self.type == 'b':
+        elif self.type == 'b':
             total = self.sansplomb95e10_price * self.refuel
             return f"Your last refuel ({self.refuel} L) cost {total} €"
 
-        if self.type == 'c':
+        elif self.type == 'c':
             total = self.bioethanole85_price * self.refuel
             return f"Your last refuel ({self.refuel} L) cost {total} €"
 
-        if self.type == 'd':
+        elif self.type == 'd':
             total = self.gazoleb7_price * self.refuel
             return f"Your last refuel ({self.refuel} L) cost {total} €"
 
-        if self.type == 'e':
+        elif self.type == 'e':
             total = self.gpl_price * self.refuel
             return f"Your last refuel ({self.refuel} L) cost {total} €"
 
@@ -114,19 +114,19 @@ class Car:
             lasting = self.sansplomb95e5_price * self.fuelamount
             return f"With {self.fuelamount} L lasting, you have the equivalent of {lasting} € to drive before another refuel."
 
-        if self.type == 'b':
+        elif self.type == 'b':
             lasting = self.sansplomb95e10_price * self.fuelamount
             return f"With {self.fuelamount} L lasting, you have the equivalent of {lasting} € to drive before another refuel."
 
-        if self.type == 'c':
+        elif self.type == 'c':
             lasting = self.bioethanole85_price * self.fuelamount
             return f"With {self.fuelamount} L lasting, you have the equivalent of {lasting} € to drive before another refuel."
 
-        if self.type == 'd':
+        elif self.type == 'd':
             lasting = self.gazoleb7_price * self.fuelamount
             return f"With {self.fuelamount} L lasting, you have the equivalent of {lasting} € to drive before another refuel."
 
-        if self.type == 'e':
+        elif self.type == 'e':
             lasting = self.gpl_price * self.fuelamount
             return f"With {self.fuelamount} L lasting, you have the equivalent of {lasting} € to drive before another refuel."
 
@@ -136,19 +136,19 @@ class Car:
             total1 = self.sansplomb95e5_price * self.rerefuel
             return f"Your next refuel (you plan {self.rerefuel} L) will cost {total1} €"
 
-        if self.type == 'b':
+        elif self.type == 'b':
             total1 = self.sansplomb95e10_price * self.rerefuel
             return f"Your next refuel (you plan {self.rerefuel} L) will cost {total1} €"
 
-        if self.type == 'c':
+        elif self.type == 'c':
             total1 = self.bioethanole85_price * self.rerefuel
             return f"Your next refuel (you plan {self.rerefuel} L) will cost {total1} €"
 
-        if self.type == 'd':
+        elif self.type == 'd':
             total1 = self.gazoleb7_price * self.rerefuel
             return f"Your next refuel (you plan {self.rerefuel} L) will cost {total1} €"
 
-        if self.type == 'e':
+        elif self.type == 'e':
             total1 = self.gpl_price * self.rerefuel
             return f"Your next refuel (you plan {self.rerefuel} L) will cost {total1} €"
 
