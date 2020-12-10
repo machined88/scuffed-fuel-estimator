@@ -9,7 +9,7 @@ Like the name of this repository says, this is a (very very) scuffed fuel estima
 - Can tell you how much fuel you have left in euros.
 
 The data used for this is from https://carbu.com/france/prixmoyens.
-Modules used are 'Beautiful Soup' and the built-in 'requests' for extracting the data.
+Modules used are 'Beautiful Soup' and 'requests' for extracting the data.
 
 # Why making this ?
 - I've been learning Python for about a month now (November 2020) and I decided that it is now time for my first project ever. 
